@@ -164,7 +164,7 @@ try
             
             % Create and show the mask.
             mask_mem = (rand(floor(window_w/4), floor(window_h/4))-1)*255;
-            mask_mem = resizem(255.*round(rand(rect(4)/10, rect(3)/10)), [rect(4), rect(3)]);
+            mask_mem = resizem(255.*round(rand(floor(rect(4)/10), floor(rect(3)/10))), [rect(4), rect(3)]);
             mask_mem_Tex = Screen('MakeTexture', window, mask_mem);  % make the mask_memory texture
             Screen('DrawTexture', window, mask_mem_Tex, [], [0, 0, window_w, window_h]); % draw the noise texture
             Screen('Flip',window);
